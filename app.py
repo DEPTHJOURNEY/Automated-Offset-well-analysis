@@ -12,7 +12,7 @@ def main():
         st.text("It may take couple of minutes")
         df = pd.DataFrame()
         df['Name'] = ['Abel','Bake','cook']
-        df.to_excel('JVJayarah3/Automated-offset-well-analysis/tree/main/Folders/test.xlsx')
+        df.to_excel('app/Automated-offset-well-analysis/main/Folders/test.xlsx')
         
 
         st.text("done")
