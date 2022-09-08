@@ -14,7 +14,7 @@ def main():
         df['Name'] = ['Abel','Bake','cook']
         content = "Dear Sir, \n\t\t\t Kindly find the attached document. \n\n\n\n Thanks & Regards \n Jayaraj J V"
         subject = "test-onlibe cloud"
-        subject = subject + str(final_date)
+        subject = subject 
         user = 'jvjayaraj7@gmail.com'
         app_password = 'ceyo luws wsef fagr' # a token for gmail
         to = "jvjayaraj4@gmail.com"
