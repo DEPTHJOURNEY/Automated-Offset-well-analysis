@@ -12,7 +12,7 @@ def main():
         st.text("It may take couple of minutes")
         df = pd.DataFrame()
         df['Name'] = ['Abel','Bake','cook']
-        df.to_excel(test.xlsx)
+        df.to_excel('test.xlsx')
        
 main()
 
