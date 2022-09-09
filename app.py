@@ -13,23 +13,25 @@ def main():
     if result1:
         st.header("PROCESSING")
         st.text("It may take couple of minutes")
+        pdf_file_obj = []
         for r in result:
             st.text(str(r))
-            pdf_file_obj =  r
+            pdf_file_obj.append(r)
             #print(x)
             #print(pdf_file_obj)
-            pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
-            text = ""
-            for pagenum in range(pdf_reader.numPages):
-                pageobj = pdf_reader.getPage(pagenum)
-                text += pageobj.extractText()
-                #print(text)
-                #text= text.replace("\n"," ")
-                #print(text)
-                text= text.replace("\n"," ")
-                text1 = str(text)
-        st.text("done")
-        st.text(text1)
+            for x in pdf_file_obj:
+                pdf_reader = PyPDF2.PdfFileReader(x)
+                text = ""
+                for pagenum in range(pdf_reader.numPages):
+                    pageobj = pdf_reader.getPage(pagenum)
+                    text += pageobj.extractText()
+                    #print(text)
+                    #text= text.replace("\n"," ")
+                    #print(text)
+                    text= text.replace("\n"," ")
+                    text1 = str(text)
+            st.text("done")
+            st.text(text1)
 main()
 
    
