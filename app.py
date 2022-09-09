@@ -6,8 +6,10 @@ import PyPDF2
 
 
 st.title("AUTOMATED OFFSET WELL ANALYSIS")
-text = ""
+
 def main():
+    text = ""
+    tex = []
     result = st.file_uploader("Upload", type="pdf",accept_multiple_files=True)
     result1 = st.button("ANALYSE")
     if result1:
@@ -25,13 +27,16 @@ def main():
                 for pagenum in range(pdf_reader.numPages):
                     pageobj = pdf_reader.getPage(pagenum)
                     text += pageobj.extractText()
+                    tex.append(pageobj.extractText())
                     #print(text)
                     #text= text.replace("\n"," ")
                     #print(text)
                     text= text.replace("\n"," ")
                     text1 = text
+                    tex1 = str(tex)
         st.text("done")
         st.text(text1)
+        st.text(tex1)
         
 main()
 
