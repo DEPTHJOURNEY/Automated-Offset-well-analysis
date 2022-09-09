@@ -6,7 +6,6 @@ PyPDF2
 regex
 glob2
 numpy
-pywin32
 dataframe-image
 Pillow
 XlsxWriter
