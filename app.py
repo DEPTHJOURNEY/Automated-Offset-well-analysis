@@ -30,8 +30,8 @@ def main():
                     #print(text)
                     text= text.replace("\n"," ")
                     text1 = str(text)
-        st.text("done")
-        st.text(text1)
+            st.text("done")
+            st.text(text1)
 main()
 
    
