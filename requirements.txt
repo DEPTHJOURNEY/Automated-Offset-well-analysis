@@ -4,7 +4,6 @@ openpyxl
 yagmail
 PyPDF2
 regex
-os-sys
 glob2
 numpy
 pywin32
