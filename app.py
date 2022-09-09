@@ -15,8 +15,7 @@ def main():
         st.text("It may take couple of minutes")
         for r in result:
             st.text(str(r))
-            if r.endswith('.pdf'):
-                onlypdfs.append(r)
+            onlypdfs.append(r)
         
         for x in onlypdfs:
             pdf_file_obj =  x
