@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import openpyxl
-import yagmail 
+import yagmail
+import os
 
 
 st.title("AUTOMATED OFFSET WELL ANALYSIS")
