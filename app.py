@@ -6,11 +6,10 @@ import PyPDF2
 
 
 st.title("AUTOMATED OFFSET WELL ANALYSIS")
-
+text = ""
 def main():
     result = st.file_uploader("Upload", type="pdf",accept_multiple_files=True)
     result1 = st.button("ANALYSE")
-    text = ""
     if result1:
         st.header("PROCESSING")
         st.text("It may take couple of minutes")
@@ -33,6 +32,7 @@ def main():
                     text1 = text
         st.text("done")
         st.text(text1)
+        
 main()
 
    
