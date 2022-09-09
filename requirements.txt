@@ -2,3 +2,7 @@ streamlit
 pandas
 openpyxl
 yagmail
+PyPDF2
+regex
+os-sys
+glob2
