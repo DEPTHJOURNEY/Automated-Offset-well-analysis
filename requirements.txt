@@ -1,12 +1,7 @@
 streamlit
 pandas
 openpyxl
-yagmail
 PyPDF2
 regex
-glob2
 numpy
-dataframe-image
-Pillow
-XlsxWriter
 matplotlib
