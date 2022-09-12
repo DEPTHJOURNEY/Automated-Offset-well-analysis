@@ -356,7 +356,7 @@ def main():
         dft['CSD'] = datt['CSD']
         
         dft['X-axis'] = pd.to_numeric(dft['X-axis'],downcast='float')
-        dft['Y-axis'] = pd.to_numeric(dft['Y-axis'],downcast='float')
+        #dft['Y-axis'] = pd.to_numeric(dft['Y-axis'],downcast='float')
         dft['S X axis'] = pd.to_numeric(dft['S X axis'],downcast='float')
         #dft['CSD'] = pd.to_numeric(dft['CSD'],downcast='float')
         
