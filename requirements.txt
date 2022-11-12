@@ -5,3 +5,4 @@ PyPDF2
 regex
 numpy
 matplotlib
+gsheetsdb==x.x.x
