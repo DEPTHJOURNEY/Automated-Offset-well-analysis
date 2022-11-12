@@ -1,1 +1,14 @@
+private_gsheets_url = "https://docs.google.com/spreadsheets/d/18Q3ypNUX9U899qJaQ2_aPNqD-MfO6P3_/edit?usp=sharing"
+#&ouid=109400073566661044179&rtpof=true&sd=true
 
+[gcp_service_account]
+type = "service_account"
+project_id = "well-analysis-368410"
+private_key_id = "dd91b7ff874226c88771c27e43bbc7d5be3f1ad4"
+private_key = "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDfTkCxEb18xnrg\nNhBgSbxiQWkafJgEfOLhgYjnxOtKqqKAvcYJkI1nNu0lmT7u/V++he2IhHpnGn+/\nLC1YAuUAjt/0BS85IiDNiaXIEzlYQcpqiR/dMUF/aOOv8j70eu4c1ONFqkqBi2z7\nziI18fHquQECMRbEp/+c4NgpgnWZNG3XonGT/VYYm6iLbFebDnktnxU8reVtRvz+\nytWVIgnDCN5+rlvZMDp3RawY4063m6FHccjzh/mrznTKsJ4eRhgfwt+hTH8LUZe8\nzKXeo8FTouAzv70p5npAqs8PJQko83HTDvkPOj8GGxBz8CG1PuKviWa8rHw7H6qf\n2Wjsi1fHAgMBAAECggEAA67twD3zqzA27KXXpU7yDYjYq/gsJb7NmzygvnnwC54+\n6fK3Zob83hv402rwr858Gs9ouJy+zB6Sxtt6r/30OwsgRI0lV0Lp2ZoQovk2M+95\n4EH8xZA/bVOUld1gDnZMoSsdyJNjgTmEha7Dv7IK9H0yuA+JOZsvyy2mQyEEwY8k\n8Vc8RHReVC+zU4pkBPptPkiDkCwmjREj3Qv3KOl/7UWRJ6vaazx65Ajpv2140Krz\nNBUJoo8ayhKIqUu4zkVBAD8liK0yC6hqNKmCXPz9uMf+UE9ykt8MgqiMtzbEqzmV\n0q24brNqSUhU0/TELJV1AQbbBK+OygTq08irWGzooQKBgQDxoQTGWw3Wbyf9MCe1\nZLoDAQDj+Q+4dFcE6CNfkJQR/mPoK0yjUCJAgLyeKFVWU48fcdocd2pxZ5QtmPxx\nEoxd1iKxjgR/SlH/gYaipxJjXX4ce19YTriCN2q2U4fOCxpaBBtbE8j0fXXK0Nml\nPfVAJ2DENBgvNXqAe3DPVtLstwKBgQDslj+CFuuGKVOT2r45sC93MLOK2wMgIfrh\nEqszgEEKS0bYMYPNHglyYZ+ah1r/ObbPRCEYVRoiZJhbmdAYrme5dWbsC4fE0i1V\nMaGnsAYv1gD7iYsMcphyTa0uVtoe79hfBy+BdtxV+PzeUQIWycmdNRGnJETavT+b\nLNEBhoD9cQKBgBV4+bOm49PqjOMzJFQ6X01lCW848uyxagpFlt8nOgFfWgGH14er\n119kEV78tpi1VEK3G2rsMcliKwjiT4y82Tx9ixe8RyoIsMDEAfLyZe/unwZo8FAo\nrrzjr9gEFE17LxxQwR2W5ITVoWIkrTLCDslktnS5LG0Fk51XWu8SCCyBAoGBAKYb\nEznF19TZHRn5AYfFQH4hjl0WScp8sQTnM5Y0HPYaRgIyOYSA60cIbaN0FxqMreI1\nxjqsPW4aTLI7etRpVt/qIrnlmoxAuJ1Q/Fuchat+SDBSsHKr3oaaLNYVGo2P/c0y\nYVM3XZlq+Dcqjxnq0Qf0I5HDMCiXqJnNTG0Sv2uxAoGAOpPvf3CXsFyiIWOtbHmK\nyvcoE33W2KEy1AI9xZX72HirtZgTHQaCg7oW+dcaol4+ZGO6OPzwobR1lf+0fWIM\ncRZs0OTtTT1gtpbpDGvVVhdLHJVk2foaUiNQ1mkkfxXYR6Ff3doe//m+T5fC25U4\nO7D8fpA8DtKz7wvnMuPSz64=\n-----END PRIVATE KEY-----\n"
+client_email = "service-acc@well-analysis-368410.iam.gserviceaccount.com"
+client_id = "107704250177218513208"
+auth_uri = "https://accounts.google.com/o/oauth2/auth"
+token_uri = "https://oauth2.googleapis.com/token"
+auth_provider_x509_cert_url = "https://www.googleapis.com/oauth2/v1/certs"
+client_x509_cert_url = "https://www.googleapis.com/robot/v1/metadata/x509/service-acc%40well-analysis-368410.iam.gserviceaccount.com"
