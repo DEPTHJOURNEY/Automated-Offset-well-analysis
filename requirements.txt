@@ -1,3 +1,4 @@
+pdfplumber
 streamlit
 pandas
 openpyxl
@@ -5,4 +6,5 @@ PyPDF2
 regex
 numpy
 matplotlib
-gsheetsdb
+plotly
+DateTime
