@@ -87,7 +87,7 @@ if submit_rig_no:
     
     
     
-    st.dataframe(df_rig_no[['date','IADC_DESC','Time_count','activity','color','well_no']])
+    st.dataframe(df_rig_no[['date','IADC_DESC','Time_count','activity','well_no']])
     
     df_graph=df_rig_no.dropna(subset=['Time_count'])
     elapsedtime = pd.DataFrame()
@@ -130,7 +130,7 @@ if submit_well_no:
     
     
     
-    st.dataframe(df_rig_no[['date','IADC_DESC','Time_count','activity','color','well_no']])
+    st.dataframe(df_rig_no[['date','IADC_DESC','Time_count','activity','well_no']])
     df_graph=df_rig_no.dropna(subset=['Time_count'])
     elapsedtime = pd.DataFrame()
     elapsedtime['IADC_DESC'] = df_rig_no['IADC_DESC']
@@ -170,7 +170,7 @@ if submit_month:
     st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
     
     
-    st.dataframe(df_rig_no[['date','IADC_DESC','Time_count','activity','color','well_no']])
+    st.dataframe(df_rig_no[['date','IADC_DESC','Time_count','activity','well_no']])
     df_graph=df_rig_no.dropna(subset=['Time_count'])
     elapsedtime = pd.DataFrame()
     elapsedtime['IADC_DESC'] = df_rig_no['IADC_DESC']
@@ -210,7 +210,7 @@ if submit_color:
         df_rig_no = df1[(df1['color']==add_select_box_color) & (df1['rig_no']==add_select_box_rig_no) & (df1['well_no'] ==add_select_box_well_no) & (df1['month_wise']==add_select_box_month_no)]
         
    
-    st.dataframe(df_rig_no[['date','IADC_DESC','Time_count','activity','color','well_no']])
+    st.dataframe(df_rig_no[['date','IADC_DESC','Time_count','activity','well_no']])
     elapsedtime = pd.DataFrame()
     elapsedtime['IADC_DESC'] = df_rig_no['IADC_DESC']
     elapsedtime['Time_count'] = df_rig_no['Time_count']
