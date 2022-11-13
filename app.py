@@ -9,10 +9,18 @@ from datetime import datetime
 import plotly.graph_objects as go
 
 st.set_page_config(page_title='ONE-PLACE')
-path = "F:/iadc-deep shah/IADC-LAST WELL/"
 
-print("restarting///////......")
-df1 = pd.read_excel(path+"IADC_WELL_RPT.xlsx")
+url = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT.xlsx?raw=true"
+
+#print(df)
+
+
+#path = "F:/iadc-deep shah/IADC-LAST WELL/"
+
+#print("restarting///////......")
+#df1 = pd.read_excel(path+"IADC_WELL_RPT.xlsx")
+
+df1 = pd.read_excel(url)
 
 st.header("ONE-REPORT")
 #st.header("PROCESSING")
@@ -40,14 +48,6 @@ df1['Time_count'] = df1['Time_count'].replace('-',"")
 df1['Time_count'] = df1['Time_count'].replace('',np.nan,regex=True)
 df1['Time_count'] = df1['Time_count'].astype(float)
 
-
-df2 = pd.DataFrame()
-df2['date'] = df1['date']
-df2['color'] = df1['color']
-print(df2)
-#df2 = df2.drop_duplicates(subset=['date'])
-df2 = df2.groupby(by=df2['date']).sum().reset_index()
-print(df2)
 
 #buttons = []
 #for r in df2['date']:
