@@ -18,7 +18,7 @@ st.write("df is taking")
 df = load_data(st.secrets["public_gsheets_url"])
 st.write("df is taken")
 # Print results.
-st.write(df.columns)
+st.write(df.head)
 
 for row in df.itertuples():
     st.write(row)
