@@ -24,5 +24,5 @@ st.write(df)
 for row in df.itertuples():
     st.write(row)
     #st.write(df.columns)
-    st.write(f"{row.0} is :{row.1}:")
+    st.write(f"{row} is :{row}:")
 #st.write(df['code'])
