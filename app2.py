@@ -17,12 +17,12 @@ def load_data(sheets_url):
 st.write("df is taking")
 df = load_data(st.secrets["public_gsheets_url"])
 st.write("df is taken")
-st.write(df)
+#st.write(df)
 # Print results.
 
 
 for row in df.itertuples():
-    st.write(row)
+    #st.write(row)
     #st.write(df.columns)
-    st.write(f"{row} is :{row}:")
+    st.write(f"{row.index} is :{row}:")
 #st.write(df['code'])
