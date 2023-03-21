@@ -21,7 +21,7 @@ st.write("df is taken")
 #st.write(f"{df.name} is :{df.pet}:")
 
 for row in df.itertuples():
-    #st.write(row)
-    st.write(df.columns)
+    st.write(row)
+    #st.write(df.columns)
     #st.write(f"{row.name} is :{row.pet}:")
 #st.write(df['code'])
