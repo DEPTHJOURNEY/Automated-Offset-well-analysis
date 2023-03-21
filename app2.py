@@ -17,6 +17,7 @@ def load_data(sheets_url):
 df = load_data(st.secrets["public_gsheets_url"])
 
 # Print results.
-#for row in df.itertuples():
-#st.write(f"{row.code} is :{row.IADC_DESC}:")
-st.write(df['code'])
+st.write("df is taken")
+for row in df.itertuples():
+    st.write(f"{row.name} is :{row.pet}:")
+#st.write(df['code'])
