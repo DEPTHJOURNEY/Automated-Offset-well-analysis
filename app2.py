@@ -13,7 +13,7 @@ st.write("df is taking")
 
 def load_data(sheets_url):
     csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
-    return pd.read_csv(csv_url, error_bad_lines=False)
+    return pd.read_csv(csv_url)
 st.write("df is taking")
 df = load_data(st.secrets["public_gsheets_url"])
 st.write("df is taken")
@@ -24,5 +24,5 @@ st.write("df is taken")
 for row in df.itertuples():
     #st.write(row)
     #st.write(df.columns)
-    st.write(f"{row} is :{row}:")
+    st.write(f"{row.name} is :{row.pet}:")
 #st.write(df['code'])
