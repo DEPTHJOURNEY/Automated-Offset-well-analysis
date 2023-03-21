@@ -18,10 +18,10 @@ st.write("df is taking")
 df = load_data(st.secrets["public_gsheets_url"])
 st.write("df is taken")
 # Print results.
-st.write(df.head)
+
 
 for row in df.itertuples():
-    st.write(row)
+    st.write(row.name)
     #st.write(df.columns)
     #st.write(f"{row.name} is :{row.pet}:")
 #st.write(df['code'])
