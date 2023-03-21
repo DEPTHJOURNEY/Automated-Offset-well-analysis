@@ -16,9 +16,9 @@ def load_data(sheets_url):
     return pd.read_csv(csv_url)
 st.write("df is taking")
 df = load_data(st.secrets["public_gsheets_url"])
-
-# Print results.
 st.write("df is taken")
+# Print results.
+
 for row in df.itertuples():
     st.write(f"{row.name} is :{row.pet}:")
 #st.write(df['code'])
