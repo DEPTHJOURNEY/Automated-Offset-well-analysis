@@ -6,16 +6,16 @@ st.set_page_config(layout='centered')
 img_path = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/oil%20rig1.jpg"
 from streamlit_extras.switch_page_button import switch_page
 
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url(img_path)
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-) 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/oil%20rig1.jpg");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
     
   
 
