@@ -5,11 +5,8 @@ from PIL import Image
 st.set_page_config(layout='centered')
 img_path = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/oil%20rig1.jpg"
 from streamlit_extras.switch_page_button import switch_page
-ind_user_list = ["user_1",'user_2',"user_3"]
-ind_pass_list = ["user_1","user_2","user_3"]
-
 import base64
-def add_bg_from_local(image_file):
+"""def add_bg_from_local(image_file):
     with open(image_file, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
     st.markdown(
@@ -22,8 +19,27 @@ def add_bg_from_local(image_file):
     </style>
     """,
     unsafe_allow_html=True
-    )
-add_bg_from_local(img_path)    
+    )"""
+
+   st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url(img_path)
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+) 
+    
+  
+
+
+
+
+
+
+#add_bg_from_local(img_path)    
 st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
 
 st.title("LOGIN CREDENTIALS")
