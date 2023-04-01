@@ -13,29 +13,33 @@ from streamlit_extras.switch_page_button import switch_page
 st.set_page_config(layout='wide')
 import pandas as pd
 
-path_1 = "F:/iadc-deep shah/IADC-LAST WELL/SHOWCASE/IADC_WELL_RPT_test.xlsx"
-path_2 = "F:/iadc-deep shah/IADC-LAST WELL/SHOWCASE/IADC_WELL_RPT_rig_color.xlsx"
-path_3 = "F:/iadc-deep shah/IADC-LAST WELL/SHOWCASE/IADC_WELL_RPT_reg_color.xlsx"
+path_1 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
+path_2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
+path_3 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
 df_1 =  pd.read_excel(path_1)
 df_2 =  pd.read_excel(path_2)
 df_3 =  pd.read_excel(path_3)
 
-st.write(st.session_state['date_value'])
-st.write(st.session_state['rig_value'])
+
 
 selected_date = st.session_state['date_value']
 selected_rig = st.session_state['rig_value']
 
 col1,col2 = st.columns([5,1])
-shelf_logo = Image.open("F:/iadc-deep shah/shelf_icon.png")
+shelf_logo = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
 with col1:
     st.title("SUMMARY")
+    
 with col2:
     st.image(shelf_logo)
     home_button = st.button("HOME")
     if home_button:
+        for key in st.session_state.keys():
+            del st.session_state[key]
         switch_page("test")
-    
+    change_data = st.button("MASTER-DATA")
+    if change_data:
+        switch_page("mainsheet")
 col1,col2 = st.columns(2)
 with col1:
     st.write("----------------------")
@@ -61,9 +65,7 @@ with col1:
     st.write("----------------------")
 with col2:
     st.write("----------------------")
-change_data = st.button("CHANGE DATA")
-if change_data:
-    switch_page("mainsheet")
+
 df_temp = df_1
 df_temp = df_temp[df_temp['date']==selected_date ]
 df_temp = df_temp[df_temp['rig_no']==selected_rig]
