@@ -28,7 +28,7 @@ st.markdown("""
 
 </style>
 
-"", unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 path_1 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
 path_2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
