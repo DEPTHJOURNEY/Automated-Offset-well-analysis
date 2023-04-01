@@ -17,6 +17,18 @@ import base64
 from streamlit_extras.switch_page_button import switch_page
 import pandas as pd
 
+st.markdown("""
+
+<style>
+
+
+ .css-1iyw2u1 {
+        display: none;
+    }
+
+</style>
+
+"", unsafe_allow_html=True)
 
 path_1 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
 path_2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
