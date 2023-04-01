@@ -30,11 +30,11 @@ df_3  = df_3.sort_values(by='date',ascending=False)
 last_date = df_3['date'].iloc[-1]
 print(last_date)
 
-st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
+#st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
 
 date_select = df_3['date'].unique()
 df_3['date'] = df_3['date'].astype(str)
-shelf_logo = Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
+shelf_logo = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
 north_image_img = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/north_sea3.jpg?raw=true"
 south_east_asia = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/south_east_asia3.jpg?raw=true"
 india = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/india.jpg?raw=true"
