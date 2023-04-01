@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Mar 26 21:48:40 2023
-
-@author: Jayaraj
-"""
 import streamlit as st
 import time
 from PIL import Image
@@ -47,7 +41,7 @@ with st.container():
     
     with col1:
         st.write("RON TAPPMEYER")
-        st.image(Image.open("F:/iadc-deep shah/rig icon/India/RTP-MKT.jpg"))
+        st.image(Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/india/RTP-MKT.jpg?raw=true"))
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='RTP']
@@ -59,78 +53,96 @@ with st.container():
             #del st.session_state['date_value']
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "RTP"
-            
-            
             switch_page('summary')
             
         st.write("PARAMESHWARA")
-        st.image(Image.open("F:/iadc-deep shah/rig icon/India/Shelf-Drilling-parameshwara.jpg"))
+        st.image(Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling-parameshwara.jpg?raw=true"))
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='PSW']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
         s12 = st.button("SUMMARY",key='12')
-   
-    
+        if s12:
+            if 'rig_value' not in st.session_state:
+                st.session_state['rig_value'] = "PSW"
+            switch_page('summary')
     with col2:
         st.write("THORNTON")
-        st.image(Image.open("F:/iadc-deep shah/rig icon/India/Shelf-Drilling_CE-Thornton-.jpg"))
+        st.image(Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling_CE-Thornton-.jpg?raw=true"))
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='CET']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
         s2 = st.button("SUMMARY",key='2')
+        if s2:
+            if 'rig_value' not in st.session_state:
+                st.session_state['rig_value'] = "CET"
         
         st.write("J T ANGEL")
-        st.image(Image.open("F:/iadc-deep shah/rig icon/India/SJ-jackup-J-T-Angel.jpg"))
+        st.image(Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/india/SJ-jackup-J-T-Angel.jpg?raw=true"))
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
         s22 = st.button("SUMMARY",key='22')
-        
+        if s22:
+            if 'rig_value' not in st.session_state:
+                st.session_state['rig_value'] = ""
+            switch_page('summary')
     with col3:
         st.write("FG-MCCLINTOCK")
-        st.image(Image.open("F:/iadc-deep shah/rig icon/India/Shelf-Drilling_FG-McClintock-..jpg"))
+        st.image(Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling_FG-McClintock-..jpg?raw=true"))
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='FGM']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
         s3 = st.button("SUMMARY",key='3')
-        
+        if s3:
+            if 'rig_value' not in st.session_state:
+                st.session_state['rig_value'] = "FGM"
+            switch_page('summary')
+                
         st.write("TRIDENT-II")
-        st.image(Image.open("F:/iadc-deep shah/rig icon/India/Trident-II_.jpg"))
+        st.image(Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/india/Trident-II_.jpg?raw=true"))
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='T02']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
         s32 = st.button("SUMMARY",key='32')
-        
+        if s32:
+            if 'rig_value' not in st.session_state:
+                st.session_state['rig_value'] = "T02"
+            switch_page('summary')
     with col4:
         st.write("TRIDENT-XII")
-        st.image(Image.open("F:/iadc-deep shah/rig icon/India/Shelf-Drilling_Trident-XII_.jpg"))
+        st.image(Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling_Trident-XII_.jpg?raw=true"))
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='T12']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
         s4 = st.button("SUMMARY",key='4')
+        if s4:
+            if 'rig_value' not in st.session_state:
+                st.session_state['rig_value'] = ""
+            switch_page('summary')
         #st.button("SUMMARY   ")
     with col5:
         st.write("KEY SINGAPORE")
-        st.image(Image.open("F:/iadc-deep shah/rig icon/India/Shelf-Drilling-key singapore.jpg"))
+        st.image(Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling-key singapore.jpg?raw=true"))
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='KSN']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
         s5 = st.button("SUMMARY",key='5')
+        if s5:
+            if 'rig_value' not in st.session_state:
+                st.session_state['rig_value'] = ""
+            switch_page('summary')
         #st.button("SUMMARY    ")
-    
-    
-    
