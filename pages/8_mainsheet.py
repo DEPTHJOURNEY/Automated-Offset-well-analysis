@@ -1,11 +1,15 @@
 import streamlit as st
-import streamlit as st
 import time
-from streamlit_card import card
 from PIL import Image
 import base64
 from streamlit_extras.switch_page_button import switch_page
 import pandas as pd
+import plotly.express as px
+import pandas as pd
+import numpy as np
+import re
+from datetime import datetime
+import plotly.graph_objects as go
 
 
 path_1 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
