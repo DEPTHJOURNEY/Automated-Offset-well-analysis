@@ -6,12 +6,14 @@ st.set_page_config(layout='centered')
 img_path = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/oil%20rig1.jpg"
 from streamlit_extras.switch_page_button import switch_page
 
+
+#https://drive.google.com/drive/u/0/my-drive
 def add_bg_from_url():
     st.markdown(
          f"""
          <style>
          .stApp {{
-             background-image: url("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/oil%20rig1.jpg");
+             background-image: url("https://drive.google.com/file/d/1ufu5Init4starLhyBusDUYUvS_dF87zp/view?usp=share_link");
              background-attachment: fixed;
              background-size: cover
          }}
