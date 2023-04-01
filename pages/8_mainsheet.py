@@ -22,7 +22,7 @@ df_1['date']= pd.to_datetime(df_1['date']).dt.date
 df_1  = df_1.sort_values(by='date',ascending=False)
 
 col1,col2 = st.columns([5,1])
-shelf_logo = Image.open("F:/iadc-deep shah/shelf_icon.png")
+shelf_logo = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
 with col1:
     st.header("MASTERSHEET")
 with col2:
