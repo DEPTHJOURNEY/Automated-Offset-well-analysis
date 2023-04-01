@@ -69,6 +69,8 @@ with st.container():
         st.image(tile)
         s1 = st.button("CLICK TO ENTER",key='1')
         if s1:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
             switch_page("southeastasia")
         
         
@@ -85,6 +87,8 @@ with st.container():
         
         s2 = st.button("CLICK TO ENTER",key='2')
         if s2:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
             switch_page("northsea")
         df_3_temp = df_3   
         df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
@@ -158,6 +162,8 @@ with st.container():
         
         s1 = st.button("CLICK TO ENTER",key='7')
         if s1:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
             switch_page("westafrica")
         st.image(tile)
         
@@ -179,4 +185,6 @@ with st.container():
         #st.text("")
         #st.text("")
         st.image(tile)
+
+
 
