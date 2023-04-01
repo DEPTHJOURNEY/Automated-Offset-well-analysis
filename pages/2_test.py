@@ -16,7 +16,7 @@ from PIL import Image
 import base64
 from streamlit_extras.switch_page_button import switch_page
 import pandas as pd
-
+st.set_page_config(layout='wide')
 st.markdown("""
 
 <style>
