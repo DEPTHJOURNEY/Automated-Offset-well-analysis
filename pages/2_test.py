@@ -29,12 +29,12 @@ df_3['date'] = pd.to_datetime(df_3['date']).dt.date
 df_3  = df_3.sort_values(by='date',ascending=False)
 last_date = df_3['date'].iloc[-1]
 print(last_date)
-shelf_logo = Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
-st.image(shelf_logo)
+
+st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
 
 date_select = df_3['date'].unique()
 df_3['date'] = df_3['date'].astype(str)
-
+shelf_logo = Image.open("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
 north_image_img = Image.open("F:/iadc-deep shah/north_sea3.jpg")
 south_east_asia = Image.open("F:/iadc-deep shah/south_east_asia3.jpg")
 india = Image.open("F:/iadc-deep shah/india.jpg")
