@@ -13,7 +13,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/oil rig1.jpg");
+             background-image: url("https://cdn.pixabay.com/photo/2019/12/22/22/05/oil-4713386_960_720.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
