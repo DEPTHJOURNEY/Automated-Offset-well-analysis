@@ -1,13 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Mar 24 20:31:22 2023
-
-@author: Jayaraj
-"""
-
-
-
-
 import streamlit as st
 import streamlit as st
 import time
@@ -58,7 +48,7 @@ blank = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/
 tile = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile2.jpg?raw=true"
 tile2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile3.jpg?raw=true"
 
-st.set_page_config(layout='wide')
+
 #home = st.button("HOME")
 #if home:
 #    switch_page("rigregion")
