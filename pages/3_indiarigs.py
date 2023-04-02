@@ -138,7 +138,7 @@ with st.container():
         s4 = st.button("SUMMARY",key='4')
         if s4:
             if 'rig_value' not in st.session_state:
-                st.session_state['rig_value'] = ""
+                st.session_state['rig_value'] = "T12"
             switch_page('summary')
         #st.button("SUMMARY   ")
     with col5:
@@ -152,6 +152,6 @@ with st.container():
         s5 = st.button("SUMMARY",key='5')
         if s5:
             if 'rig_value' not in st.session_state:
-                st.session_state['rig_value'] = ""
+                st.session_state['rig_value'] = "KSN"
             switch_page('summary')
         #st.button("SUMMARY    ")
