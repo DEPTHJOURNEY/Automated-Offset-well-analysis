@@ -150,6 +150,8 @@ with st.container():
     with col1:
         
         s1 = st.button("CLICK TO ENTER",key='4')
+        if s1:
+            switch_page("menam")
         st.image(tile)
         
         df_3_temp = df_3   
