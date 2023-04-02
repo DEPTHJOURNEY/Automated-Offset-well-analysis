@@ -213,7 +213,7 @@ with st.container():
         
     with col5:
         st.write("HIGH ISLAND II")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling-key singapore.jpg?raw=true")
+        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/HI2-Picture-1-Jun-2015-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='HI2']
@@ -241,6 +241,7 @@ with st.container():
             
         st.write("ODYSSEY")
         st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/NHC.jpg?raw=true")
+        
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDO']
