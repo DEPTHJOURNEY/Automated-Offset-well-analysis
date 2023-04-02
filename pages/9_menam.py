@@ -240,7 +240,7 @@ with st.container():
             switch_page('summary')
             
         st.write("ODYSSEY")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/NHC.jpeg?raw=true")
+        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/NHC.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDO']
