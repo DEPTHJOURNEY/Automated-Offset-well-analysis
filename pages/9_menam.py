@@ -84,8 +84,8 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='HI4']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
-        s12 = st.button("SUMMARY",key='12')
-        if s12:
+        s13 = st.button("SUMMARY",key='13')
+        if s13:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "HI4"
             switch_page('summary')
@@ -124,8 +124,8 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDR']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
-        s22 = st.button("SUMMARY",key='22')
-        if s22:
+        s23 = st.button("SUMMARY",key='23')
+        if s23:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "SDR"
             switch_page('summary')
@@ -164,8 +164,8 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
-        s32 = st.button("SUMMARY",key='32')
-        if s32:
+        s33 = st.button("SUMMARY",key='33')
+        if s33:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "SDA"
             switch_page('summary')
@@ -192,8 +192,8 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='MP4']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
-        s4 = st.button("SUMMARY",key='4')
-        if s4:
+        s42 = st.button("SUMMARY",key='42')
+        if s42:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "MP4"
             switch_page('summary')
@@ -205,8 +205,8 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDV']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
-        s4 = st.button("SUMMARY",key='4')
-        if s4:
+        s43 = st.button("SUMMARY",key='43')
+        if s43:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "SDV"
             switch_page('summary')
@@ -233,8 +233,8 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='MP1']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
-        s5 = st.button("SUMMARY",key='5')
-        if s5:
+        s52 = st.button("SUMMARY",key='52')
+        if s52:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "MP1"
             switch_page('summary')
@@ -246,8 +246,8 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDO']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         st.text(south_east_asia_write)
-        s5 = st.button("SUMMARY",key='5')
-        if s5:
+        s53 = st.button("SUMMARY",key='53')
+        if s53:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "SDO"
             switch_page('summary')
