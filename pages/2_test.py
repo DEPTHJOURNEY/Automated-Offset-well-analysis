@@ -151,6 +151,8 @@ with st.container():
         
         s1 = st.button("CLICK TO ENTER",key='4')
         if s1:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
             switch_page("menam")
         st.image(tile)
         
