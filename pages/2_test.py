@@ -20,9 +20,9 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-path_1 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
-path_2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
-path_3 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
+path_1 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
+path_2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
+path_3 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
 df_1 =  pd.read_excel(path_1)
 df_2 =  pd.read_excel(path_2)
 df_3 =  pd.read_excel(path_3)
@@ -32,21 +32,21 @@ df_3  = df_3.sort_values(by='date',ascending=False)
 last_date = df_3['date'].iloc[-1]
 print(last_date)
 
-#st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
+#st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
 
 date_select = df_3['date'].unique()
 df_3['date'] = df_3['date'].astype(str)
-shelf_logo = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
-north_image_img = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/north_sea3.jpg?raw=true"
-south_east_asia = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/south_east_asia3.jpg?raw=true"
-india = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/india.jpg?raw=true"
-india2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/india2.jpg?raw=true"
-india4 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/india4.jpg?raw=true"
-west_africa = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/WESTAFRICA2.jpg?raw=true"
-menam = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/MENAM2.jpg?raw=true"
-blank = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/blank.jpg?raw=true"
-tile = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile2.jpg?raw=true"
-tile2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile3.jpg?raw=true"
+shelf_logo = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
+north_image_img = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/north_sea3.jpg?raw=true"
+south_east_asia = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/south_east_asia3.jpg?raw=true"
+india = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india.jpg?raw=true"
+india2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india2.jpg?raw=true"
+india4 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india4.jpg?raw=true"
+west_africa = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/WESTAFRICA2.jpg?raw=true"
+menam = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/MENAM2.jpg?raw=true"
+blank = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/blank.jpg?raw=true"
+tile = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile2.jpg?raw=true"
+tile2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile3.jpg?raw=true"
 
 
 #home = st.button("HOME")
@@ -191,6 +191,5 @@ with st.container():
         #st.text("")
         #st.text("")
         st.image(tile)
-
 
 
