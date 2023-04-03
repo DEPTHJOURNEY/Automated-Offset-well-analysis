@@ -16,9 +16,9 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
-path_1 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
-path_2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
-path_3 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
+path_1 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
+path_2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
+path_3 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
 df_1 =  pd.read_excel(path_1)
 df_2 =  pd.read_excel(path_2)
 df_3 =  pd.read_excel(path_3)
@@ -30,7 +30,7 @@ selected_date = st.session_state['date_value']
 #    del st.session_state[key]
 
 col1,col2 = st.columns([5,1])
-shelf_logo = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
+shelf_logo = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
 
 with col1:
     st.header("RIGS JACKED UP IN INDIA REGION")
@@ -50,7 +50,7 @@ with st.container():
     
     with col1:
         st.write("HARVEY H WARD")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Harvey-H-Ward-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Harvey-H-Ward-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='HHW']
@@ -65,7 +65,7 @@ with st.container():
             switch_page('summary')
             
         st.write("TRIDENT-XVI")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Trident-16-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Trident-16-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='T16']
@@ -78,7 +78,7 @@ with st.container():
             switch_page('summary')
             
         st.write("HIGH ISLAND IV")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/High-Island-IV-IMG_7103-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/High-Island-IV-IMG_7103-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='HI4']
@@ -93,7 +93,7 @@ with st.container():
             
     with col2:
         st.write("COMPACT DRILLER")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Compact-Driller-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Compact-Driller-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='CMD']
@@ -105,7 +105,7 @@ with st.container():
                 st.session_state['rig_value'] = "CMD"
         
         st.write("KEY MANHATTAN")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Key-Manhattan_1-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Key-Manhattan_1-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='KMN']
@@ -118,7 +118,7 @@ with st.container():
             switch_page('summary')
             
         st.write("RESOURCEFUL")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/SD-Resourceful-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/SD-Resourceful-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDR']
@@ -132,7 +132,7 @@ with st.container():
             
     with col3:
         st.write("HIGH ISLAND V")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/High-Island-V_2-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/High-Island-V_2-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='HI5']
@@ -145,7 +145,7 @@ with st.container():
             switch_page('summary')
                 
         st.write("RIG 141")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Rig-141-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Rig-141-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='141']
@@ -158,7 +158,7 @@ with st.container():
             switch_page('summary')
             
         st.write("ACHEIVER")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling-Achiever-3-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling-Achiever-3-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDA']
@@ -172,7 +172,7 @@ with st.container():
             
     with col4:
         st.write("HIGH ISLAND IX")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/High-Island-IX_1-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/High-Island-IX_1-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='HI9']
@@ -186,7 +186,7 @@ with st.container():
         #st.button("SUMMARY   ")
         
         st.write("MAIN PASS IV")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Main-Pass-IV-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Shelf-Drilling_Main-Pass-IV-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='MP4']
@@ -199,7 +199,7 @@ with st.container():
             switch_page('summary')
         
         st.write("VICTORY")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/SDV-1-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/SDV-1-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDV']
@@ -213,7 +213,7 @@ with st.container():
         
     with col5:
         st.write("HIGH ISLAND II")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/HI2-Picture-1-Jun-2015-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/HI2-Picture-1-Jun-2015-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='HI2']
@@ -227,7 +227,7 @@ with st.container():
         #st.button("SUMMARY    ")
         
         st.write("MAIN PASS I")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Main-Pass-I-Pic-22016-200x140.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Main-Pass-I-Pic-22016-200x140.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='MP1']
@@ -240,7 +240,7 @@ with st.container():
             switch_page('summary')
             
         st.write("ODYSSEY")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/menam/NHC.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/NHC.jpg?raw=true")
         
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
