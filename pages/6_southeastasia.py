@@ -16,15 +16,15 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
-path_1 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
-path_2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
-path_3 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
+path_1 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
+path_2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
+path_3 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
 df_1 =  pd.read_excel(path_1)
 df_2 =  pd.read_excel(path_2)
 df_3 =  pd.read_excel(path_3)
 selected_date = st.session_state['date_value']
 col1,col2 = st.columns([5,1])
-shelf_logo = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
+shelf_logo = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
 
 with col1:
     st.header("RIGS JACKED UP IN SOUTH EAST ASIA REGION")
@@ -44,7 +44,7 @@ with st.container():
     
     with col1:
         st.write("ENTERPRISE")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/SDE3.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/SDE3.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDE']
@@ -59,7 +59,7 @@ with st.container():
     
     with col2:
         st.write("SCEPTER")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/SD-Scepter.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/SD-Scepter.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDS']
@@ -74,7 +74,7 @@ with st.container():
         
     with col3:
         st.write("CHAOPPHRAYA")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/Shelf-Drilling-Chaophraya.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/Shelf-Drilling-Chaophraya.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDC']
@@ -90,7 +90,7 @@ with st.container():
         
     with col4:
         st.write("KRATHONG")
-        st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/Shelf-Drilling-Krathong.jpg?raw=true")
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/Shelf-Drilling-Krathong.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDK']
