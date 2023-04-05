@@ -34,48 +34,59 @@ df_3 =  pd.read_excel(path_3)
 
 selected_date = st.session_state['date_value']
 selected_rig = st.session_state['rig_value']
+selected_color = st.session_state['color_value']
 
-col1,col2 = st.columns([5,1])
+col1,col2,col3,col4 = st.columns([5,2,2,1])
 shelf_logo = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
 with col1:
     st.title("SUMMARY")
     
-with col2:
+with col4:
     st.image(shelf_logo)
+with col3:
     home_button = st.button("HOME")
     if home_button:
         for key in st.session_state.keys():
             del st.session_state[key]
         switch_page("test")
+with col2:
     change_data = st.button("MASTER-DATA")
     if change_data:
         switch_page("mainsheet")
-col1,col2 = st.columns(2)
-with col1:
-    st.write("----------------------")
-with col2:
-    st.write("----------------------")
-   
-col1,col2,col3,col4,col5,col6 = st.columns(6)
-with col1:
-    st.write("DESIGN")
-with col2:
-    st.write("MAX DRILLING DEPTH")
-with col3:
-    st.write("LOCATION")
-with col4:
-    st.write("CLIENT")
-with col5:
-    st.write("MAX WATER DEPTH")
-with col6:
-    st.write("MAX ACCOMODATION")
 
-col1,col2 = st.columns(2)
-with col1:
-    st.write("----------------------")
-with col2:
-    st.write("----------------------")
+if selected_color != "WHITE":
+    col1,col2 = st.columns(2)
+    with col1:
+        st.write("----------------------")
+    with col2:
+        st.write("----------------------")
+    df_sum = df_1
+    df_sum = df_sum[df_sum['date']==selected_date ]
+    df_sum = df_sum[df_sum['rig_no']==selected_rig]
+    df_sum = df_sum[df_sum['color']==selected_color]
+    df_show_sum = pd.DataFrame()
+    df_show_sum['Time_count'] = df_sum['Time_count']
+    df_show_sum['IADC_DESC'] = df_sum['IADC_DESC']
+    df_show_sum['activity'] = df_sum['activity']
+    
+    hide_table_row_index = """
+                <style>
+                thead tr th:first-child {display:none}
+                tbody th {display:none}
+                </style>
+                """
+    
+    # Inject CSS with Markdown
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
+    st.table(df_show_sum)
 
+    col1,col2 = st.columns(2)
+    with col1:
+        st.write("----------------------")
+    with col2:
+        st.write("----------------------")
+        
+st.header("DETAILED-ACTIVITY")
 df_temp = df_1
 df_temp = df_temp[df_temp['date']==selected_date ]
 df_temp = df_temp[df_temp['rig_no']==selected_rig]
