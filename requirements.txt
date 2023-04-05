@@ -9,3 +9,4 @@ matplotlib
 plotly
 DateTime
 streamlit-extras
+st-annotated-text
