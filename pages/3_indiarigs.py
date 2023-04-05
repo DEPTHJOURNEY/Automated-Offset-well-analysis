@@ -108,7 +108,6 @@ with st.container():
             name_color = "#afa"     
         else:
             name_color = "#FFF"
-        st.write(name_color)
         annotated_text(("THORNTON","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling_CE-Thornton-.jpg?raw=true")
         s2 = st.button("SUMMARY",key='2')
