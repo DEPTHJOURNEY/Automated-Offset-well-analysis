@@ -29,7 +29,7 @@ path_3 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/ma
 df_1 =  pd.read_excel(path_1)
 df_2 =  pd.read_excel(path_2)
 df_3 =  pd.read_excel(path_3)
-df_1['Time_count'].round(decimals=1)
+df_1['Time_count'] = df_1['Time_count'].round(decimals=1)
 
 
 selected_date = st.session_state['date_value']
