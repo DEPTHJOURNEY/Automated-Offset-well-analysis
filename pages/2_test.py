@@ -6,7 +6,7 @@ from PIL import Image
 import base64
 from streamlit_extras.switch_page_button import switch_page
 import pandas as pd
-
+from annotated_text import annotated_text
 st.set_page_config(layout='wide',initial_sidebar_state="collapsed")
 st.markdown(
     """
@@ -71,17 +71,17 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['region_name']=='SOUTH EAST ASIA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         if south_east_asia_write == "YELLOW":  
-            card_color = yellow
+            card_color = '#fea'
         elif south_east_asia_write == "WHITE":  
-            card_color = green
+            card_color = '#afa'
         elif south_east_asia_write == "RED":  
-            card_color = red
+            card_color = '#faa'
         else:
-            card_color = white
+            card_color = '#FFF'
         s1 = card(
             title="SOUTH EAST ASIA RIGS",
             text="",
-            image = card_color
+            image = south_east_asia
         )
         
         if s1:
@@ -95,17 +95,17 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['region_name']=='NORTH SEA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         if south_east_asia_write == "YELLOW":  
-            card_color = yellow
+            card_color = '#fea'
         elif south_east_asia_write == "WHITE":  
-            card_color = green
+            card_color = '#afa'
         elif south_east_asia_write == "RED":  
-            card_color = red
+            card_color = '#faa'
         else:
-            card_color = white
+            card_color = '#FFF'
         s2 = card(
             title="NORTH SEA RIGS",
             text="",
-            image = card_color
+            image = north_image_img
         )
         if s2:
             if 'date_value' not in st.session_state:
@@ -119,17 +119,17 @@ with st.container():
         df_3_temp = df_3_temp[df_3_temp['region_name']=='INDIA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         if south_east_asia_write == "YELLOW":  
-            card_color = yellow
+            card_color = '#fea'
         elif south_east_asia_write == "WHITE":  
-            card_color = green
+            card_color = '#afa'
         elif south_east_asia_write == "RED":  
-            card_color = red
+            card_color = '#faa'
         else:
-            card_color = white
+            card_color = '#FFF'
         s3 = card(
             title="INDIA RIGS",
             text="",
-            image = card_color
+            image = india
         )
         if s3:
             if 'date_value' not in st.session_state:
@@ -146,17 +146,17 @@ with st.container():
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         
         if south_east_asia_write == "YELLOW":  
-            card_color = yellow
+            card_color = '#fea'
         elif south_east_asia_write == "WHITE":  
-            card_color = green
+            card_color = '#afa'
         elif south_east_asia_write == "RED":  
-            card_color = red
+            card_color = '#faa'
         else:
-            card_color = white
+            card_color = '#FFF'
         s4 = card(
             title="MENAM RIGS",
             text="",
-            image = card_color
+            image = menam
         )
         if s4:
             if 'date_value' not in st.session_state:
@@ -172,17 +172,17 @@ with st.container():
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         
         if south_east_asia_write == "YELLOW":  
-            card_color = yellow
+            card_color = '#fea'
         elif south_east_asia_write == "WHITE":  
-            card_color = green
+            card_color = '#afa'
         elif south_east_asia_write == "RED":  
-            card_color = red
+            card_color = '#faa'
         else:
-            card_color = white
+            card_color = '#FFF'
         s5 = card(
              title="WEST AFRICA RIGS",
              text="",
-             image = card_color
+             image = west_africa
         )
         if s5:
             if 'date_value' not in st.session_state:
