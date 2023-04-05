@@ -58,7 +58,7 @@ with st.container():
     with col5:
         date_selectbox = st.selectbox("DATE",df_3['date'].unique())
     with col1:
-        st.header("REGION - DATA")
+        st.title("REGION - DATA")
 
 with st.container():
     col1,col2,col3 = st.columns(3)
