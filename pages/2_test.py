@@ -78,6 +78,7 @@ with st.container():
             card_color = '#faa'
         else:
             card_color = '#FFF'
+        annotated_text(("SOUTH EAST ASIA RIGS","",card_color))
         s1 = card(
             title="SOUTH EAST ASIA RIGS",
             text="",
@@ -102,6 +103,7 @@ with st.container():
             card_color = '#faa'
         else:
             card_color = '#FFF'
+        annotated_text(("NORTH SEA RIGS","",card_color))
         s2 = card(
             title="NORTH SEA RIGS",
             text="",
@@ -126,6 +128,7 @@ with st.container():
             card_color = '#faa'
         else:
             card_color = '#FFF'
+        annotated_text(("INDIA RIGS","",card_color))
         s3 = card(
             title="INDIA RIGS",
             text="",
@@ -153,6 +156,7 @@ with st.container():
             card_color = '#faa'
         else:
             card_color = '#FFF'
+        annotated_text(("MENAM RIGS","",card_color))
         s4 = card(
             title="MENAM RIGS",
             text="",
@@ -179,6 +183,7 @@ with st.container():
             card_color = '#faa'
         else:
             card_color = '#FFF'
+        annotated_text(("WEST AFRICA RIGS","",card_color))
         s5 = card(
              title="WEST AFRICA RIGS",
              text="",
