@@ -8,7 +8,6 @@ from streamlit_extras.switch_page_button import switch_page
 import pandas as pd
 
 st.set_page_config(layout='wide',initial_sidebar_state="collapsed")
-st.header("REGION - DATA")
 st.markdown(
     """
 <style>
@@ -53,11 +52,13 @@ white = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/mai
 green = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/green.JPG?raw=true"
 
 with st.container():
-    col1,col2,col3,col4,col5,col6 =st.columns([5.5,5,2.5,5,2.5,2.5])
+    col1,col2,col3,col4,col5,col6 =st.columns([6,5,2,5,2.5,2.5])
     with col6:
         st.image(shelf_logo)
+    with col5:
         date_selectbox = st.selectbox("DATE",df_3['date'].unique())
-        
+    with col1:
+        st.header("REGION - DATA")
 
 with st.container():
     col1,col2,col3 = st.columns(3)
