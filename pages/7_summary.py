@@ -29,7 +29,7 @@ path_3 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/ma
 df_1 =  pd.read_excel(path_1)
 df_2 =  pd.read_excel(path_2)
 df_3 =  pd.read_excel(path_3)
-df_1['Time_count'] = df_1['Time_count'].round(decimals=1)
+
 
 
 selected_date = st.session_state['date_value']
@@ -68,7 +68,7 @@ if selected_color != "WHITE":
     df_show_sum['Time_count'] = df_sum['Time_count']
     df_show_sum['IADC_DESC'] = df_sum['IADC_DESC']
     df_show_sum['activity'] = df_sum['activity']
-    
+    df_show_sum['Time_count'] = df_show_sum['Time_count'].round(decimals=1)
     hide_table_row_index = """
                 <style>
                 thead tr th:first-child {display:none}
@@ -94,7 +94,7 @@ df_show = pd.DataFrame()
 df_show['Time_count'] = df_temp['Time_count']
 df_show['IADC_DESC'] = df_temp['IADC_DESC']
 df_show['activity'] = df_temp['activity']
-
+df_show['Time_count'] = df_show['Time_count'].round(decimals=1)
 hide_table_row_index = """
             <style>
             thead tr th:first-child {display:none}
