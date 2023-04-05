@@ -45,7 +45,7 @@ with st.container():
     with col2:
         login_button = st.button('LOGIN')
 if login_button:
-    if username in user_name and password == pass_word:
+    if username in user_name and password in pass_word:
         st.write('LOGGING IN .....')
         with st.spinner("LOADING..."):
             time.sleep(2)
