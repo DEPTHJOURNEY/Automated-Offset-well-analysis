@@ -36,7 +36,7 @@ selected_date = st.session_state['date_value']
 selected_rig = st.session_state['rig_value']
 selected_color = st.session_state['color_value']
 
-col1,col2,col3,col4 = st.columns([5,2,2,1])
+col1,col2,col3,col4 = st.columns([6,1,1,1])
 shelf_logo = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
 with col1:
     st.title("SUMMARY")
