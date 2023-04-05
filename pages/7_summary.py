@@ -69,7 +69,7 @@ if selected_color != "WHITE":
     df_show_sum['IADC_DESC'] = df_sum['IADC_DESC']
     df_show_sum['activity'] = df_sum['activity']
     df_show_sum['Time_count'] = df_show_sum['Time_count'].astype(float)
-    df_show_sum['Time_count'] = df_show_sum['Time_count'].round(decimals=1)
+    df_show_sum['Time_count'].round(decimals=1)
     hide_table_row_index = """
                 <style>
                 thead tr th:first-child {display:none}
