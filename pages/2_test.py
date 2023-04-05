@@ -36,12 +36,12 @@ print(last_date)
 date_select = df_3['date'].unique()
 df_3['date'] = df_3['date'].astype(str)
 shelf_logo = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
-north_image_img = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/north_sea3.jpg?raw=true"
-south_east_asia = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/south_east_asia3.jpg?raw=true"
+north_image_img = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/north_sea.jpg?raw=true"
+south_east_asia = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/south_east_asia.jpg?raw=true"
 india = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india.jpg?raw=true"
 india2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india2.jpg?raw=true"
 india4 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india4.jpg?raw=true"
-west_africa = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/WESTAFRICA2.jpg?raw=true"
+west_africa = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/west_africa.jpg?raw=true"
 menam = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/MENAM2.jpg?raw=true"
 blank = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/blank.jpg?raw=true"
 tile = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile2.jpg?raw=true"
