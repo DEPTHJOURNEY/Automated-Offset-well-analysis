@@ -61,7 +61,7 @@ with st.container():
         elif south_east_asia_write == "WHITE":
             name_color = "#afa"     
         else:
-            name_color = ""
+            name_color = "#FFF"
         annotated_text(("RON TAPPMEYER","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/RTP-MKT.jpg?raw=true")
         s1 = st.button("SUMMARY",key='1')
@@ -85,7 +85,7 @@ with st.container():
         elif south_east_asia_write == "WHITE":
             name_color = "#afa"     
         else:
-            name_color = ""
+            name_color = "#FFF"
         annotated_text(("PARAMESHWARA","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling-parameshwara.jpg?raw=true")
         s12 = st.button("SUMMARY",key='12')
@@ -107,7 +107,7 @@ with st.container():
         elif south_east_asia_write == "WHITE":
             name_color = "#afa"     
         else:
-            name_color = "#8ef"
+            name_color = "#FFF"
         st.write(name_color)
         annotated_text(("THORNTON","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling_CE-Thornton-.jpg?raw=true")
@@ -130,7 +130,7 @@ with st.container():
         elif south_east_asia_write == "WHITE":
             name_color = "#afa"     
         else:
-            name_color = ""
+            name_color = "#FFF"
         annotated_text(("J T ANGEL","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/SJ-jackup-J-T-Angel.jpg?raw=true")
         s22 = st.button("SUMMARY",key='22')
@@ -152,7 +152,7 @@ with st.container():
         elif south_east_asia_write == "WHITE":
             name_color = "#afa"     
         else:
-            name_color = ""
+            name_color = "#FFF"
         annotated_text(("FG-MCCLINTOCK","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling_FG-McClintock-..jpg?raw=true")
         
@@ -175,7 +175,7 @@ with st.container():
         elif south_east_asia_write == "WHITE":
             name_color = "#afa"     
         else:
-            name_color = ""
+            name_color = "#FFF"
         annotated_text(("TRIDENT-II","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/Trident-II_.jpg?raw=true")
         s32 = st.button("SUMMARY",key='32')
@@ -197,7 +197,7 @@ with st.container():
         elif south_east_asia_write == "WHITE":
             name_color = "#afa"     
         else:
-            name_color = ""
+            name_color = "#FFF"
         annotated_text(("TRIDENT-XII","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling_Trident-XII_.jpg?raw=true")
                        
@@ -221,7 +221,7 @@ with st.container():
         elif south_east_asia_write == "WHITE":
             name_color = "#afa"     
         else:
-            name_color = ""
+            name_color = "#FFF"
         annotated_text(("KEY SINGAPORE","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/india/Shelf-Drilling-key singapore.jpg?raw=true")
         s5 = st.button("SUMMARY",key='5')
