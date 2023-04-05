@@ -5,7 +5,8 @@ from PIL import Image
 st.set_page_config(layout='centered')
 img_path = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/oil rig1.jpg?raw=true"
 from streamlit_extras.switch_page_button import switch_page
-
+user_name = ['admin','Aaftaab.k','aaftaab.k']
+pass_word = ['abc@123','Review@2023','Review@2023']
 #https://cdn.pixabay.com/photo/2019/04/24/11/27/flowers-4151900_960_720.jpg
 #https://drive.google.com/drive/u/0/my-drive
 #https://cdn.pixabay.com/photo/2020/03/23/23/19/generator-4962278_960_720.png
@@ -44,7 +45,7 @@ with st.container():
     with col2:
         login_button = st.button('LOGIN')
 if login_button:
-    if username == "admin" and password == "abc@123":
+    if username in user_name and password == pass_word:
         st.write('LOGGING IN .....')
         with st.spinner("LOADING..."):
             time.sleep(2)
