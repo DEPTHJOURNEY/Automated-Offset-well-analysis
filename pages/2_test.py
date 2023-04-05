@@ -47,8 +47,152 @@ menam = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/mai
 blank = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/blank.jpg?raw=true"
 tile = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile2.jpg?raw=true"
 tile2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile3.jpg?raw=true"
+yellow = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/yellow.JPG?raw=true"
+red = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/red.JPG?raw=true"
+white = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/white.JPG?raw=true"
+green = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/green.JPG?raw=true"
+
+with st.container():
+    col1,col2,col3,col4,col5,col6 =st.columns([5.5,5,2.5,5,2.5,2.5])
+    with col6:
+        st.image(shelf_logo)
+        date_selectbox = st.selectbox("DATE",df_3['date'].unique())
+        
+
+with st.container():
+    col1,col2,col3 = st.columns(3)
+    #with col3:
+        #st.image(north_image_img)
+        #s1 = st.button("ENTER THE REGION",key='1')
+    with col1:
+        df_3_temp = df_3   
+        df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
+        df_3_temp = df_3_temp[df_3_temp['region_name']=='SOUTH EAST ASIA']
+        south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
+        if south_east_asia_write == "YELLOW":  
+            card_color = yellow
+        elif south_east_asia_write == "WHITE":  
+            card_color = green
+        elif south_east_asia_write == "RED":  
+            card_color = red
+        else:
+            card_color = white
+        s1 = card(
+            title="SOUTH EAST ASIA RIGS",
+            text="",
+            image = card_color
+        )
+        
+        if s1:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
+            
+            switch_page("southeastasia")    
+    with col2:
+        df_3_temp = df_3   
+        df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
+        df_3_temp = df_3_temp[df_3_temp['region_name']=='NORTH SEA']
+        south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
+        if south_east_asia_write == "YELLOW":  
+            card_color = yellow
+        elif south_east_asia_write == "WHITE":  
+            card_color = green
+        elif south_east_asia_write == "RED":  
+            card_color = red
+        else:
+            card_color = white
+        s2 = card(
+            title="NORTH SEA RIGS",
+            text="",
+            image = card_color
+        )
+        if s2:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
+            
+            switch_page("northsea")
+    
+    with col3:
+        df_3_temp = df_3   
+        df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
+        df_3_temp = df_3_temp[df_3_temp['region_name']=='INDIA']
+        south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
+        if south_east_asia_write == "YELLOW":  
+            card_color = yellow
+        elif south_east_asia_write == "WHITE":  
+            card_color = green
+        elif south_east_asia_write == "RED":  
+            card_color = red
+        else:
+            card_color = white
+        s3 = card(
+            title="INDIA RIGS",
+            text="",
+            image = card_color
+        )
+        if s3:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
+          
+            switch_page("indiarigs")
+        
+    
+    col1,col2,col3 = st.columns(3)
+    with col1:
+        df_3_temp = df_3   
+        df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
+        df_3_temp = df_3_temp[df_3_temp['region_name']=='MENAM']
+        south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
+        
+        if south_east_asia_write == "YELLOW":  
+            card_color = yellow
+        elif south_east_asia_write == "WHITE":  
+            card_color = green
+        elif south_east_asia_write == "RED":  
+            card_color = red
+        else:
+            card_color = white
+        s4 = card(
+            title="MENAM RIGS",
+            text="",
+            image = card_color
+        )
+        if s4:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
+            
+            switch_page("menam")
+       
+   
+    with col2:
+        df_3_temp = df_3   
+        df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
+        df_3_temp = df_3_temp[df_3_temp['region_name']=='WEST AFRICA']
+        south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
+        
+        if south_east_asia_write == "YELLOW":  
+            card_color = yellow
+        elif south_east_asia_write == "WHITE":  
+            card_color = green
+        elif south_east_asia_write == "RED":  
+            card_color = red
+        else:
+            card_color = white
+        s5 = card(
+             title="WEST AFRICA RIGS",
+             text="",
+             image = card_color
+        )
+        if s5:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
+            switch_page("westafrica")
 
 
+
+
+
+"""
 #home = st.button("HOME")
 #if home:
 #    switch_page("rigregion")
@@ -192,4 +336,4 @@ with st.container():
         #st.text("")
         st.image(tile)
 
-
+"""
