@@ -56,7 +56,7 @@ with st.container():
             name_color = "#afa"     
         else:
             name_color = "#FFF"
-        annotated_text(("BALTIC","",name_color)))
+        annotated_text(("BALTIC","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/west_africa/Baltic.jpg?raw=true")
         s1 = st.button("SUMMARY",key='1')
         if s1:
