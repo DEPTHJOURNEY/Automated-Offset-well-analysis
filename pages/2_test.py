@@ -52,14 +52,14 @@ white = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/mai
 green = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/green.JPG?raw=true"
 
 with st.container():
-    col1,col2,col3,col4,col5,col6 =st.columns([6,5,4,2.5,2.5,2.5])
-    with col6:
+    col1,col2,col3,col4,col5,col6 =st.columns([6,5,4,2.5,2.5,2])
+    with col5:
         st.image(shelf_logo)
     with col4:
         date_selectbox = st.selectbox("DATE",df_3['date'].unique())
     with col1:
         st.title("REGION - DATA")
-    with col5:
+    with col6:
         log_out = st.button("LOG OUT")
         if log_out:
             for key in st.session_state.keys():
