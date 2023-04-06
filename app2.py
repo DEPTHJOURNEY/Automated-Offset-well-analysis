@@ -17,7 +17,7 @@ def load_data(sheets_url):
 st.write("df is taking")
 df = load_data(st.secrets["public_gsheets_url"])
 st.write("df is taken")
-#st.write(df)
+st.dataframe(df)
 # Print results.
 
 
