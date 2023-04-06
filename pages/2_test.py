@@ -52,7 +52,7 @@ white = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/mai
 green = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/green.JPG?raw=true"
 
 with st.container():
-    col1,col2,col3,col4,col5,col6 =st.columns([6,3,2,2.5,2.5,2.5])
+    col1,col2,col3,col4,col5,col6 =st.columns([6,5,4,2.5,2.5,2.5])
     with col6:
         st.image(shelf_logo)
     with col4:
