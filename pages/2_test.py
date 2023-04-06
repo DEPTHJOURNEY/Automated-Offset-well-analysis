@@ -63,10 +63,12 @@ with st.container():
     with col5:
         st.image(shelf_logo)
     with col4:
+        st.text(" ")
         date_selectbox = st.selectbox("DATE",df_3['date'].unique())
     with col1:
         st.title("REGION - DATA")
     with col6:
+        st.text(" ")
         log_out = st.button("LOG OUT")
         if log_out:
             for key in st.session_state.keys():
