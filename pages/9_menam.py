@@ -343,7 +343,7 @@ with st.container():
             name_color = "#afa"     
         else:
             name_color = "#FFF"
-        annotated_text("HIGH ISLAND II","",name_color))
+        annotated_text(("HIGH ISLAND II","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/HI2-Picture-1-Jun-2015-200x140.jpg?raw=true")
         
         s5 = st.button("SUMMARY",key='5')
