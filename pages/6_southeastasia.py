@@ -4,6 +4,7 @@ from PIL import Image
 import base64
 from streamlit_extras.switch_page_button import switch_page
 import pandas as pd
+from annotated_text import annotated_text
 st.set_page_config(layout='wide',initial_sidebar_state="collapsed")
 
 st.markdown(
@@ -43,62 +44,102 @@ with st.container():
     col1,col2,col3,col4,col5 = st.columns(5)
     
     with col1:
-        st.write("ENTERPRISE")
-        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/SDE3.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDE']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
+        if south_east_asia_write == "RED":
+            name_color = "#faa"
+        elif south_east_asia_write == "YELLOW":
+            name_color = "#fea"
+        elif south_east_asia_write == "WHITE":
+            name_color = "#afa"     
+        else:
+            name_color = "#FFF"
+        annotated_text(("ENTERPRISE","",name_color))
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/SDE3.jpg?raw=true")
+        
         s1 = st.button("SUMMARY",key='1')
         if s1:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "SDE"
+            if 'color_value' not in st.session_state:
+                st.session_state['color_value'] = south_east_asia_write    
             switch_page('summary')
    
     
     with col2:
-        st.write("SCEPTER")
-        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/SD-Scepter.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDS']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
+        if south_east_asia_write == "RED":
+            name_color = "#faa"
+        elif south_east_asia_write == "YELLOW":
+            name_color = "#fea"
+        elif south_east_asia_write == "WHITE":
+            name_color = "#afa"     
+        else:
+            name_color = "#FFF"
+        annotated_text(("SCEPTER","",name_color))
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/SD-Scepter.jpg?raw=true")
+        
         s2 = st.button("SUMMARY",key='2')
         if s2:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "SDS"
+            if 'color_value' not in st.session_state:
+                st.session_state['color_value'] = south_east_asia_write    
             switch_page('summary') 
        
         
     with col3:
-        st.write("CHAOPPHRAYA")
-        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/Shelf-Drilling-Chaophraya.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDC']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
+        if south_east_asia_write == "RED":
+            name_color = "#faa"
+        elif south_east_asia_write == "YELLOW":
+            name_color = "#fea"
+        elif south_east_asia_write == "WHITE":
+            name_color = "#afa"     
+        else:
+            name_color = "#FFF"
+        annotated_text(("CHAOPPHRAYA","",name_color))
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/Shelf-Drilling-Chaophraya.jpg?raw=true")
+        
         s3 = st.button("SUMMARY",key='3')
         if s3:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "SDC"
+            if 'color_value' not in st.session_state:
+                st.session_state['color_value'] = south_east_asia_write    
             switch_page('summary')  
         
         
         
     with col4:
-        st.write("KRATHONG")
-        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/Shelf-Drilling-Krathong.jpg?raw=true")
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
         df_3_temp = df_3_temp[df_3_temp['rig_no']=='SDK']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
+        if south_east_asia_write == "RED":
+            name_color = "#faa"
+        elif south_east_asia_write == "YELLOW":
+            name_color = "#fea"
+        elif south_east_asia_write == "WHITE":
+            name_color = "#afa"     
+        else:
+            name_color = "#FFF"
+        annotated_text(("KRATHONG","",name_color))
+        st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/south_east_asia/Shelf-Drilling-Krathong.jpg?raw=true")
+        
         s4 = st.button("SUMMARY",key='4')
         if s4:
             if 'rig_value' not in st.session_state:
                 st.session_state['rig_value'] = "SDK"
+            if 'color_value' not in st.session_state:
+                st.session_state['color_value'] = south_east_asia_write    
             switch_page('summary') 
         #st.button("SUMMARY   ")
