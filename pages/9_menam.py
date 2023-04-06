@@ -367,7 +367,7 @@ with st.container():
             name_color = "#afa"     
         else:
             name_color = "#FFF"
-        annotated_text("MAIN PASS I","",name_color))
+        annotated_text(("MAIN PASS I","",name_color))
         st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/menam/Main-Pass-I-Pic-22016-200x140.jpg?raw=true")
         
         s52 = st.button("SUMMARY",key='52')
