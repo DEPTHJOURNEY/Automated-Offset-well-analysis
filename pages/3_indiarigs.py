@@ -128,7 +128,7 @@ with st.container():
         
         df_3_temp = df_2
         df_3_temp = df_3_temp[df_3_temp['date']==selected_date]
-        df_3_temp = df_3_temp[df_3_temp['rig_no']=='']
+        df_3_temp = df_3_temp[df_3_temp['rig_no']=='JTA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
         if south_east_asia_write == "RED":
             name_color = "#faa"
@@ -143,7 +143,7 @@ with st.container():
         s22 = st.button("SUMMARY",key='22')
         if s22:
             if 'rig_value' not in st.session_state:
-                st.session_state['rig_value'] = ""
+                st.session_state['rig_value'] = "JTA"
             if 'color_value' not in st.session_state:
                 st.session_state['color_value'] = south_east_asia_write
             switch_page('summary')
