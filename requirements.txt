@@ -1,5 +1,5 @@
 pdfplumber
-streamlit
+streamlit==1.16.0
 pandas
 openpyxl
 PyPDF2
@@ -8,5 +8,5 @@ numpy
 matplotlib
 plotly
 DateTime
-streamlit-extras
-st-annotated-text
+streamlit-extras==0.2.4
+st-annotated-text==3.0.0
