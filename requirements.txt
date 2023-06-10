@@ -10,3 +10,4 @@ plotly
 DateTime
 streamlit-extras==0.2.4
 st-annotated-text==3.0.0
+streamlit-card==0.0.4
