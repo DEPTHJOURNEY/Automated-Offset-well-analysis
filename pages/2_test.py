@@ -6,9 +6,8 @@ from PIL import Image
 import base64
 from streamlit_extras.switch_page_button import switch_page
 import pandas as pd
-
+from annotated_text import annotated_text
 st.set_page_config(layout='wide',initial_sidebar_state="collapsed")
-
 st.markdown(
     """
 <style>
@@ -19,10 +18,17 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
 
-path_1 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
-path_2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
-path_3 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+path_1 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_test.xlsx?raw=true"
+path_2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_rig_color.xlsx?raw=true"
+path_3 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/IADC_WELL_RPT_reg_color.xlsx?raw=true"
 df_1 =  pd.read_excel(path_1)
 df_2 =  pd.read_excel(path_2)
 df_3 =  pd.read_excel(path_3)
@@ -32,165 +38,174 @@ df_3  = df_3.sort_values(by='date',ascending=False)
 last_date = df_3['date'].iloc[-1]
 print(last_date)
 
-#st.image("https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
+#st.image("https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true")
 
 date_select = df_3['date'].unique()
 df_3['date'] = df_3['date'].astype(str)
-shelf_logo = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
-north_image_img = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/north_sea3.jpg?raw=true"
-south_east_asia = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/south_east_asia3.jpg?raw=true"
-india = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/india.jpg?raw=true"
-india2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/india2.jpg?raw=true"
-india4 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/india4.jpg?raw=true"
-west_africa = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/WESTAFRICA2.jpg?raw=true"
-menam = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/MENAM2.jpg?raw=true"
-blank = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/blank.jpg?raw=true"
-tile = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile2.jpg?raw=true"
-tile2 = "https://github.com/JVJayarah3/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile3.jpg?raw=true"
+shelf_logo = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/shelf drilling logo.png?raw=true"
+north_image_img = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/north_sea.jpg?raw=true"
+south_east_asia = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/south_east_asia.jpg?raw=true"
+india = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india.jpg?raw=true"
+india2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india2.jpg?raw=true"
+india4 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/india4.jpg?raw=true"
+west_africa = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/west_africa.jpg?raw=true"
+menam = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/MENAM2.jpg?raw=true"
+blank = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/blank.jpg?raw=true"
+tile = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile2.jpg?raw=true"
+tile2 = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/tile3.jpg?raw=true"
+yellow = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/yellow.JPG?raw=true"
+red = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/red.JPG?raw=true"
+white = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/white.JPG?raw=true"
+green = "https://github.com/DEPTHJOURNEY/Automated-Offset-well-analysis/blob/main/rig_icon/region/green.JPG?raw=true"
 
-
-#home = st.button("HOME")
-#if home:
-#    switch_page("rigregion")
-#st.title("TEST")
-#full_report = st.button('MASTER-REPORT')
 with st.container():
-    col1,col2,col3,col4,col5,col6 = st.columns([5.5,5,2.5,5,2.5,2.5])
-    with col6:
+    col1,col2,col3,col4,col5,col6 =st.columns([6,5,4,2.5,2.5,2])
+    with col5:
         st.image(shelf_logo)
+    with col4:
+        st.text(" ")
         date_selectbox = st.selectbox("DATE",df_3['date'].unique())
-        
+    with col1:
+        st.title("REGION - DATA")
+    with col6:
+        st.text(" ")
+        log_out = st.button("LOG OUT")
+        if log_out:
+            for key in st.session_state.keys():
+                del st.session_state[key]
+            switch_page("app")
 
 with st.container():
-    col1,col2,col3,col4,col5,col6 = st.columns([2.5,5,2.5,5,2.5,5.5])
+    col1,col2,col3 = st.columns(3)
     #with col3:
         #st.image(north_image_img)
         #s1 = st.button("ENTER THE REGION",key='1')
-    with col1:  
-        st.image(tile2)
-        st.image(tile)
-        s1 = st.button("CLICK TO ENTER",key='1')
-        if s1:
-            if 'date_value' not in st.session_state:
-                st.session_state['date_value'] = date_selectbox
-            switch_page("southeastasia")
-        
-        
+    with col1:
         df_3_temp = df_3   
         df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
         df_3_temp = df_3_temp[df_3_temp['region_name']=='SOUTH EAST ASIA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
-    with col2:
-        st.image(south_east_asia)
-    with col3:
-        st.image(tile2)
-        st.image(tile)
+        if south_east_asia_write == "YELLOW":  
+            card_color = '#fea'
+        elif south_east_asia_write == "WHITE":  
+            card_color = '#afa'
+        elif south_east_asia_write == "RED":  
+            card_color = '#faa'
+        else:
+            card_color = '#FFF'
+        annotated_text(("SOUTH EAST ASIA RIGS","",card_color))
+        s1 = card(
+            title="SOUTH EAST ASIA RIGS",
+            text="",
+            image = south_east_asia
+        )
         
-        s2 = st.button("CLICK TO ENTER",key='2')
-        if s2:
+        if s1:
             if 'date_value' not in st.session_state:
                 st.session_state['date_value'] = date_selectbox
-            switch_page("northsea")
+            
+            switch_page("southeastasia")    
+    with col2:
         df_3_temp = df_3   
         df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
         df_3_temp = df_3_temp[df_3_temp['region_name']=='NORTH SEA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
-    with col4:
-        st.image(north_image_img)
-    with col5:
-        st.image(tile2)
-        st.image(tile)
-    
-    
-
-with st.container():
-    col1,col2,col3,col4,col5,col6 = st.columns([8,2.5,2.5,2.5,4.5,2.5])
-    with col6:
-        st.image(tile2)
-        st.image(tile)
-    with col5:
-        st.image(india)
-    with col3:
-        st.image(tile2)
-        st.image(tile)
-    with col2:
-        st.image(tile2)
-        st.image(tile)
-    with col4:
-        st.text("")
-        st.text("")
-        st.text("")
-        st.text("")
-        st.text("")
-        
-        s7 = st.button("CLICK TO ENTER",key='8')
-        if s7:
+        if south_east_asia_write == "YELLOW":  
+            card_color = '#fea'
+        elif south_east_asia_write == "WHITE":  
+            card_color = '#afa'
+        elif south_east_asia_write == "RED":  
+            card_color = '#faa'
+        else:
+            card_color = '#FFF'
+        annotated_text(("NORTH SEA RIGS","",card_color))
+        s2 = card(
+            title="NORTH SEA RIGS",
+            text="",
+            image = north_image_img
+        )
+        if s2:
             if 'date_value' not in st.session_state:
                 st.session_state['date_value'] = date_selectbox
-            switch_page("indiarigs")
+            
+            switch_page("northsea")
+    
+    with col3:
         df_3_temp = df_3   
         df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
         df_3_temp = df_3_temp[df_3_temp['region_name']=='INDIA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
-    with col1:
-        st.write("--------------------------")
-        st.header("REGION - DATA")
-        st.write("--------------------------")
-
-    
-
-with st.container():
-    col1,col2,col3,col4,col5,col6 = st.columns([2.5,5,2.5,5,2.5,5.5])
-    #with col3:
-        #st.image(north_image_img)
-        #s1 = st.button("ENTER THE REGION",key='1')
-    with col1:
-        
-        s1 = st.button("CLICK TO ENTER",key='4')
-        if s1:
+        if south_east_asia_write == "YELLOW":  
+            card_color = '#fea'
+        elif south_east_asia_write == "WHITE":  
+            card_color = '#afa'
+        elif south_east_asia_write == "RED":  
+            card_color = '#faa'
+        else:
+            card_color = '#FFF'
+        annotated_text(("INDIA RIGS","",card_color))
+        s3 = card(
+            title="INDIA RIGS",
+            text="",
+            image = india
+        )
+        if s3:
             if 'date_value' not in st.session_state:
                 st.session_state['date_value'] = date_selectbox
-            switch_page("menam")
-        st.image(tile)
+          
+            switch_page("indiarigs")
         
+    
+    col1,col2,col3 = st.columns(3)
+    with col1:
         df_3_temp = df_3   
         df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
         df_3_temp = df_3_temp[df_3_temp['region_name']=='MENAM']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
-        #st.image(tile)
-    with col2:
-        st.image(menam)
-    with col3:
         
-        s1 = st.button("CLICK TO ENTER",key='7')
-        if s1:
+        if south_east_asia_write == "YELLOW":  
+            card_color = '#fea'
+        elif south_east_asia_write == "WHITE":  
+            card_color = '#afa'
+        elif south_east_asia_write == "RED":  
+            card_color = '#faa'
+        else:
+            card_color = '#FFF'
+        annotated_text(("MENAM RIGS","",card_color))
+        s4 = card(
+            title="MENAM RIGS",
+            text="",
+            image = menam
+        )
+        if s4:
             if 'date_value' not in st.session_state:
                 st.session_state['date_value'] = date_selectbox
-            switch_page("westafrica")
-        st.image(tile)
-        
+            
+            switch_page("menam")
+       
+   
+    with col2:
         df_3_temp = df_3   
         df_3_temp = df_3_temp[df_3_temp['date']==date_selectbox]
         df_3_temp = df_3_temp[df_3_temp['region_name']=='WEST AFRICA']
         south_east_asia_write = str(df_3_temp['color'].values).replace("['","").replace("']","")
-        st.text(south_east_asia_write)
         
-    with col4:
-        st.image(west_africa)
-    with col5:
-        #st.image(tile2)
-        
-        st.text("")
-        st.text("")
-        st.text("")
-        st.text("")
-        #st.text("")
-        #st.text("")
-        st.image(tile)
-
-
+        if south_east_asia_write == "YELLOW":  
+            card_color = '#fea'
+        elif south_east_asia_write == "WHITE":  
+            card_color = '#afa'
+        elif south_east_asia_write == "RED":  
+            card_color = '#faa'
+        else:
+            card_color = '#FFF'
+        annotated_text(("WEST AFRICA RIGS","",card_color))
+        s5 = card(
+             title="WEST AFRICA RIGS",
+             text="",
+             image = west_africa
+        )
+        if s5:
+            if 'date_value' not in st.session_state:
+                st.session_state['date_value'] = date_selectbox
+            switch_page("westafrica")
 
