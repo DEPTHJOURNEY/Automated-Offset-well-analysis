@@ -1,5 +1,6 @@
 pdfplumber
-streamlit==1.16.0
+streamlit
+#==1.16.0
 pandas
 openpyxl
 PyPDF2
